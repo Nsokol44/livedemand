@@ -1,0 +1,34 @@
+[done] unit_2wk_0.02: 50 reps in 178 s
+[done] unit_2wk_0.06: 50 reps in 90 s
+[done] unit_2wk_0.15: 50 reps in 56 s
+[done] unit_4wk_0.02: 50 reps in 118 s
+[done] unit_4wk_0.06: 50 reps in 76 s
+[done] unit_4wk_0.15: 50 reps in 32 s
+[done] unit_8wk_0.02: 50 reps in 117 s
+[done] unit_8wk_0.06: 50 reps in 36 s
+[done] unit_8wk_0.15: 50 reps in 24 s
+[done] unit_16wk_0.02: 50 reps in 58 s
+[done] unit_16wk_0.06: 50 reps in 31 s
+[done] unit_16wk_0.15: 50 reps in 42 s
+unit stage done 861 s
+[done] real_2wk_0.06: 50 reps in 92 s
+[done] real_2wk_0.15: 50 reps in 49 s
+[done] real_4wk_0.06: 50 reps in 77 s
+[done] real_4wk_0.15: 50 reps in 28 s
+[done] real_8wk_0.06: 50 reps in 41 s
+[done] real_8wk_0.15: 50 reps in 36 s
+[done] real_16wk_0.06: 50 reps in 36 s
+[done] real_16wk_0.15: 50 reps in 50 s
+real stage done 1270 s
+[done] adap_eps0.0: 50 reps in 130 s
+[done] adap_eps0.2: 50 reps in 180 s
+adaptive stage done 1580 s
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_rerun50.py", line 213, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_rerun50.py", line 193, in main
+    check_against_shipped(
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_rerun50.py", line 117, in check_against_shipped
+    assert len(m) == len(old), (label, len(m), len(old))
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: ('unit', 60, 70)

@@ -1,0 +1,7 @@
+quantity,value
+sampled ZCTAs,1500.0
+median distance to 1st neighbour (km),25.352541491851632
+median distance to 6th neighbour (km),77.15485410461028
+mean distance to 1st neighbour (km),34.51449704933435
+share of sampled ZCTAs in AK/HI/PR/territories (|lon|>125 or lat<25),0.009333333333333334
+median ZCTA land area (sq mi),39.2285

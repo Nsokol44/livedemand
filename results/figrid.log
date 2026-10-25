@@ -1,0 +1,3 @@
+real_zcta shipped covers 8 /50; fine-grid covers 40 /50; median widths 0.028 vs 0.1
+unit_square shipped covers 12 /50; fine-grid covers 41 /50; median widths 0.034 vs 0.1
+DONE in 288 s
