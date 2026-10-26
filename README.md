@@ -2,9 +2,11 @@
 
 Simulation code and result files for the manuscript **"Identifying spatial
 spillover in geo-experiments"** (Nicholas J. Sokol). The study is a simulation
-and design study: every outcome in the result files is synthetic. The only
-real data used are U.S. Census Bureau ZCTA centroid coordinates (see
-**Data sources** below).
+and design study: every outcome in the simulation result files is synthetic.
+The real data used are U.S. Census Bureau ZCTA centroid coordinates (see
+**Data sources** below) and, for the stage-2 exercises only, the public
+observational datasets listed there; stage-2 result files are prefixed
+`stage2_`.
 
 License: MIT (see `LICENSE`).
 
@@ -14,7 +16,7 @@ reported in the manuscript.
 ## Data sources
 
 - **U.S. Census Bureau 2024 Gazetteer, ZCTA national file** (public domain).
-  This is the only external dataset. It is **not** committed to this
+  This is the simulation study's only external dataset. It is **not** committed to this
   repository because of its size; `prepare_geometry.py` downloads it on
   first run from the Census Bureau:
   https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_Gaz_zcta_national.zip
@@ -24,6 +26,19 @@ reported in the manuscript.
 - No real store data are used anywhere in this repository. The real-data
   validation design specified in Section 6 of the manuscript is gated and
   unrun; no pilot data exist.
+- **Stage-2 observational data** (Section 5.6 of the manuscript; public,
+  aggregate, ZIP-code level; none committed here because of size, each
+  archived by the author with a hashed manifest):
+  - Tracking the Sun public data file, 2026 edition (Barbose et al.,
+    2025, Lawrence Berkeley National Laboratory), distributed without
+    charge or use restriction at https://bit.ly/trackingthesun2026
+    (installation-level; ~4.0M systems through YE2025; installation dates
+    are in part proxies; 31 contributing states; no county field).
+  - California Department of Motor Vehicles, Vehicle Fuel Type Count by
+    ZIP Code, annual snapshots as of 1 January 2019–2026 (California Open
+    Data Portal, no restrictions on public use).
+  - U.S. Census Bureau American Community Survey 2023 five-year estimates
+    (households) and 2020 Gazetteer ZCTA file (centroids).
 
 ## Contents
 
@@ -154,3 +169,44 @@ python experiments.py e3 --reps 5 --procs 4
   geometries are therefore distributional (across replications), not
   paired unit-by-unit.
 - Dependencies are pinned in `requirements.txt`.
+
+## Stage-2 addition (2026-10-26): calibration and observational demonstration
+
+Section 5.6 of the manuscript adds the study's only real-data exercises,
+fenced as calibration and demonstration rather than validation. The
+funnel's first stage has no analogue in adoption data, the fitted peer
+coefficient is not the funnel's gamma, and homophily and contagion are
+generically confounded in observational network data (Shalizi & Thomas,
+2011); the section states all three limits in the text.
+
+- `stage2_build_panels.py` — builds the California ZCTA panels from the
+  archived raw files (paths documented at the top of the script):
+  1,576 ZCTAs; 2,035,301 residential solar installations 2005–2024;
+  electric-vehicle stocks differenced from the DMV snapshots. Outputs
+  `results/stage2_solar_panel.csv`, `results/stage2_ev_panel.csv`,
+  `results/stage2_ca_households.csv`,
+  `results/stage2_calibration_targets.csv`,
+  `results/stage2_calibration_params.json`.
+- `stage2_calibration_rerun.py` — reruns the five verdict cells of the
+  E2 grid (8 wk @ 6%, 4 wk @ 15%, 16 wk @ 15%, 2 wk @ 6%, 2 wk @ 15%)
+  on both geometries at 25 replications per cell, in worlds calibrated
+  to the observed adoption distribution (rho_u = 0.8, sigma_u = 1.0228,
+  households resampled from the empirical ACS distribution; seed
+  20261025). Output `results/stage2_calib_e2.csv`; run log
+  `results/stage2_calib.log`. Verdict: the paper's headline conclusions
+  do not change. Both identification thresholds survive on both
+  geometries (finite in 25/25, coverage 24/25, 22/25, 24/25, 24/25);
+  two-week cells remain uninformative (finite in 2/25 and 1/25 at 6%;
+  median widths 1.13 and 1.05 at 15%); the richest cell still under-covers
+  (14/25 and 15/25, against 41/50 and 40/50 in the paper's worlds) with
+  near-unbiased mean estimates (0.60) and a median width of one
+  profile-grid step (0.025).
+- `stage2_fit_demo.py`, `stage2_fit_demo_fe.py` — the observational
+  peer-term fits under the paper's four neighborhood definitions, pooled
+  and with ZIP fixed effects, for solar installations (Poisson) and for
+  electric-vehicle net additions (OLS robustness). Outputs
+  `results/stage2_demo_fits.csv`, `results/stage2_demo_fits_fe.csv`,
+  `results/stage2_ev_fits.csv`, `results/stage2_ev_fits_fe.csv`.
+- `stage2_summarize.py` — assembles every stage-2 number the manuscript
+  quotes into `results/stage2_summary.json`. Its docstring gives the
+  one-command rerun of the whole stage-2 analysis.

@@ -1,0 +1,12 @@
+{
+ "rho_u": 0.8,
+ "moran_sim_at_rho_u": 0.6377126534083414,
+ "moran_observed": 0.5936772800826435,
+ "sigma_u": 1.0228105308001796,
+ "beta_sd": 0.4,
+ "var_factor_spatial": 2.351255585211363,
+ "var_covariate": 0.11992445271902893,
+ "receptivity_sd_target": 1.6078568654712722,
+ "ca_residential_records": 2208964,
+ "kept_in_universe": 2200854
+}

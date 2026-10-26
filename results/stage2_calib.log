@@ -1,0 +1,19 @@
+[done] unit 8wk 0.06: covers 24/25, finite 25, width_med 0.350, mean_g 0.656 (274 s)
+[done] unit 4wk 0.15: covers 24/25, finite 25, width_med 0.250, mean_g 0.639 (604 s)
+[done] unit 16wk 0.15: covers 14/25, finite 25, width_med 0.025, mean_g 0.602 (902 s)
+[done] unit 2wk 0.06: covers 25/25, finite 2, width_med 3.062, mean_g 0.768 (2456 s)
+[done] unit 2wk 0.15: covers 25/25, finite 25, width_med 1.125, mean_g 0.705 (3175 s)
+[done] real 8wk 0.06: covers 22/25, finite 25, width_med 0.325, mean_g 0.629 (3560 s)
+[done] real 4wk 0.15: covers 24/25, finite 25, width_med 0.225, mean_g 0.624 (3940 s)
+[done] real 16wk 0.15: covers 15/25, finite 25, width_med 0.025, mean_g 0.603 (4367 s)
+[skip] unit 8wk 0.06: already complete
+[skip] unit 4wk 0.15: already complete
+[skip] unit 16wk 0.15: already complete
+[skip] unit 2wk 0.06: already complete
+[skip] unit 2wk 0.15: already complete
+[skip] real 8wk 0.06: already complete
+[skip] real 4wk 0.15: already complete
+[skip] real 16wk 0.15: already complete
+[done] real 2wk 0.06: covers 25/25, finite 1, width_med 3.950, mean_g 0.722 (1307 s)
+[done] real 2wk 0.15: covers 24/25, finite 25, width_med 1.050, mean_g 0.724 (1856 s)
+calibration rerun DONE in 1856 s

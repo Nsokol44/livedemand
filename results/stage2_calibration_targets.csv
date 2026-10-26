@@ -1,0 +1,13 @@
+quantity,value
+panel ZCTAs,1576.0
+"CA residential installs in panel, 2005-2024",2035301.0
+"CA residential installs in fit window, 2010-2024",1992565.0
+median households per ZCTA,6922.0
+mean annual installs per 1000 households (fit window),11.150881185546512
+receptivity proxy: sd of log installs per 1000 HH,1.6078568654712722
+receptivity proxy: IQR of log installs per 1000 HH,1.473905082575461
+"Moran's I of receptivity proxy, k3",0.6145389038618878
+"Moran's I of receptivity proxy, k6",0.5936772800826435
+"Moran's I of receptivity proxy, k10",0.5587973447316146
+"Moran's I of receptivity proxy, band100km",0.09235058314558423
+"Moran's I of log1p cumulative adoption rate, k6",0.5624518131961281

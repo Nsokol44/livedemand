@@ -1,0 +1,26 @@
+                                             quantity        value
+                                          panel ZCTAs 1.576000e+03
+          CA residential installs in panel, 2005-2024 2.035301e+06
+     CA residential installs in fit window, 2010-2024 1.992565e+06
+                           median households per ZCTA 6.922000e+03
+mean annual installs per 1000 households (fit window) 1.115088e+01
+    receptivity proxy: sd of log installs per 1000 HH 1.607857e+00
+   receptivity proxy: IQR of log installs per 1000 HH 1.473905e+00
+                   Moran's I of receptivity proxy, k3 6.145389e-01
+                   Moran's I of receptivity proxy, k6 5.936773e-01
+                  Moran's I of receptivity proxy, k10 5.587973e-01
+            Moran's I of receptivity proxy, band100km 9.235058e-02
+      Moran's I of log1p cumulative adoption rate, k6 5.624518e-01
+{
+ "rho_u": 0.8,
+ "moran_sim_at_rho_u": 0.6377126534083414,
+ "moran_observed": 0.5936772800826435,
+ "sigma_u": 1.0228105308001796,
+ "beta_sd": 0.4,
+ "var_factor_spatial": 2.351255585211363,
+ "var_covariate": 0.11992445271902893,
+ "receptivity_sd_target": 1.6078568654712722,
+ "ca_residential_records": 2208964,
+ "kept_in_universe": 2200854
+}
+panels built: 1576 ZCTAs; 2035301 solar installs; 2112271 EVs at 2026-01-01

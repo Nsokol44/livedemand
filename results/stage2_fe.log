@@ -1,0 +1,21 @@
+{'outcome': 'solar_installs_fe', 'fitted_W': 'k3', 'gamma_hat': 0.3451074729749886, 'se_cluster': 0.027639905267099547, 'z': 12.485841381872552, 'p': 8.919540249753635e-36, 'n_obs': 23445, 'n_zips': 1563, 'mean_degree': 3.0}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:92: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'solar_installs_fe', 'fitted_W': 'k6', 'gamma_hat': 0.41677695375572055, 'se_cluster': 0.03269994928791378, 'z': 12.74549235798862, 'p': 3.3029890867249223e-37, 'n_obs': 23445, 'n_zips': 1563, 'mean_degree': 6.0}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:92: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'solar_installs_fe', 'fitted_W': 'k10', 'gamma_hat': 0.4587578131146995, 'se_cluster': 0.03511327994774275, 'z': 13.065080043716925, 'p': 5.2129767031429146e-39, 'n_obs': 23445, 'n_zips': 1563, 'mean_degree': 10.0}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:92: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'solar_installs_fe', 'fitted_W': 'band100km', 'gamma_hat': 0.2590765482121136, 'se_cluster': 0.06718322281351463, 'z': 3.8562685349473527, 'p': 0.00011513101037639616, 'n_obs': 23445, 'n_zips': 1563, 'mean_degree': 237.40672588832487}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:102: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'ev_net_additions_per_1000hh_fe', 'fitted_W': 'k3', 'gamma_hat': 0.360741152808032, 'se_cluster': 4.7396716879493175, 'z': 0.07611100020392161, 'p': 0.9393307886309455, 'n_obs': 7880, 'n_zips': 1576, 'mean_degree': 3.0}
+{'outcome': 'ev_net_additions_per_1000hh_fe', 'fitted_W': 'k6', 'gamma_hat': -0.5365191330183734, 'se_cluster': 5.001868095420218, 'z': -0.10726375081934247, 'p': 0.9145797412417649, 'n_obs': 7880, 'n_zips': 1576, 'mean_degree': 6.0}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:102: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'ev_net_additions_per_1000hh_fe', 'fitted_W': 'k10', 'gamma_hat': -4.25463639060672, 'se_cluster': 3.9842440708919624, 'z': -1.0678654005386332, 'p': 0.28558123172327, 'n_obs': 7880, 'n_zips': 1576, 'mean_degree': 10.0}
+/home/hatch/workspace/livedemand-ijgis/manuscript/code/stage2_fit_demo_fe.py:102: RuntimeWarning: invalid value encountered in sqrt
+  return beta, np.sqrt(np.diag(V))
+{'outcome': 'ev_net_additions_per_1000hh_fe', 'fitted_W': 'band100km', 'gamma_hat': -8.437708518951695, 'se_cluster': 4.633007933683266, 'z': -1.8212160738183047, 'p': 0.06857401804122432, 'n_obs': 7880, 'n_zips': 1576, 'mean_degree': 237.40672588832487}
+FE fits done

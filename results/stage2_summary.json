@@ -1,0 +1,574 @@
+{
+ "targets": [
+  {
+   "quantity": "panel ZCTAs",
+   "value": 1576.0
+  },
+  {
+   "quantity": "CA residential installs in panel, 2005-2024",
+   "value": 2035301.0
+  },
+  {
+   "quantity": "CA residential installs in fit window, 2010-2024",
+   "value": 1992565.0
+  },
+  {
+   "quantity": "median households per ZCTA",
+   "value": 6922.0
+  },
+  {
+   "quantity": "mean annual installs per 1000 households (fit window)",
+   "value": 11.150881185546512
+  },
+  {
+   "quantity": "receptivity proxy: sd of log installs per 1000 HH",
+   "value": 1.6078568654712722
+  },
+  {
+   "quantity": "receptivity proxy: IQR of log installs per 1000 HH",
+   "value": 1.473905082575461
+  },
+  {
+   "quantity": "Moran's I of receptivity proxy, k3",
+   "value": 0.6145389038618878
+  },
+  {
+   "quantity": "Moran's I of receptivity proxy, k6",
+   "value": 0.5936772800826435
+  },
+  {
+   "quantity": "Moran's I of receptivity proxy, k10",
+   "value": 0.5587973447316146
+  },
+  {
+   "quantity": "Moran's I of receptivity proxy, band100km",
+   "value": 0.0923505831455842
+  },
+  {
+   "quantity": "Moran's I of log1p cumulative adoption rate, k6",
+   "value": 0.5624518131961281
+  }
+ ],
+ "calibration_params": {
+  "rho_u": 0.8,
+  "moran_sim_at_rho_u": 0.6377126534083414,
+  "moran_observed": 0.5936772800826435,
+  "sigma_u": 1.0228105308001796,
+  "beta_sd": 0.4,
+  "var_factor_spatial": 2.351255585211363,
+  "var_covariate": 0.11992445271902893,
+  "receptivity_sd_target": 1.6078568654712722,
+  "ca_residential_records": 2208964,
+  "kept_in_universe": 2200854
+ },
+ "calibrated_cells": {
+  "real_zcta|2|0.06": {
+   "covers": 25,
+   "finite": 1,
+   "n": 25,
+   "width_med": 3.95,
+   "mean_g": 0.722
+  },
+  "real_zcta|2|0.15": {
+   "covers": 24,
+   "finite": 25,
+   "n": 25,
+   "width_med": 1.05,
+   "mean_g": 0.724
+  },
+  "real_zcta|4|0.15": {
+   "covers": 24,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.225,
+   "mean_g": 0.624
+  },
+  "real_zcta|8|0.06": {
+   "covers": 22,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.325,
+   "mean_g": 0.629
+  },
+  "real_zcta|16|0.15": {
+   "covers": 15,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.025,
+   "mean_g": 0.603
+  },
+  "unit_square|2|0.06": {
+   "covers": 25,
+   "finite": 2,
+   "n": 25,
+   "width_med": 3.062,
+   "mean_g": 0.768
+  },
+  "unit_square|2|0.15": {
+   "covers": 25,
+   "finite": 25,
+   "n": 25,
+   "width_med": 1.125,
+   "mean_g": 0.705
+  },
+  "unit_square|4|0.15": {
+   "covers": 24,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.25,
+   "mean_g": 0.639
+  },
+  "unit_square|8|0.06": {
+   "covers": 24,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.35,
+   "mean_g": 0.656
+  },
+  "unit_square|16|0.15": {
+   "covers": 14,
+   "finite": 25,
+   "n": 25,
+   "width_med": 0.025,
+   "mean_g": 0.602
+  }
+ },
+ "paper_cells": {
+  "real_zcta|2|0.06": {
+   "covers": 50,
+   "finite": 0,
+   "n": 50,
+   "width_med": null,
+   "mean_g": 0.524
+  },
+  "real_zcta|2|0.15": {
+   "covers": 50,
+   "finite": 48,
+   "n": 50,
+   "width_med": 2.362,
+   "mean_g": 0.578
+  },
+  "real_zcta|4|0.06": {
+   "covers": 50,
+   "finite": 45,
+   "n": 50,
+   "width_med": 2.7,
+   "mean_g": 0.609
+  },
+  "real_zcta|4|0.15": {
+   "covers": 48,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.65,
+   "mean_g": 0.558
+  },
+  "real_zcta|8|0.06": {
+   "covers": 49,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.838,
+   "mean_g": 0.529
+  },
+  "real_zcta|8|0.15": {
+   "covers": 46,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.238,
+   "mean_g": 0.565
+  },
+  "real_zcta|16|0.06": {
+   "covers": 46,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.3,
+   "mean_g": 0.571
+  },
+  "real_zcta|16|0.15": {
+   "covers": 40,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.1,
+   "mean_g": 0.568
+  },
+  "unit_square|2|0.02": {
+   "covers": 50,
+   "finite": 0,
+   "n": 50,
+   "width_med": null,
+   "mean_g": 0.014
+  },
+  "unit_square|2|0.06": {
+   "covers": 50,
+   "finite": 0,
+   "n": 50,
+   "width_med": null,
+   "mean_g": 0.302
+  },
+  "unit_square|2|0.15": {
+   "covers": 50,
+   "finite": 47,
+   "n": 50,
+   "width_med": 2.525,
+   "mean_g": 0.468
+  },
+  "unit_square|4|0.02": {
+   "covers": 50,
+   "finite": 0,
+   "n": 50,
+   "width_med": null,
+   "mean_g": 0.472
+  },
+  "unit_square|4|0.06": {
+   "covers": 50,
+   "finite": 47,
+   "n": 50,
+   "width_med": 2.6,
+   "mean_g": 0.57
+  },
+  "unit_square|4|0.15": {
+   "covers": 48,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.688,
+   "mean_g": 0.53
+  },
+  "unit_square|8|0.02": {
+   "covers": 50,
+   "finite": 8,
+   "n": 50,
+   "width_med": 3.5,
+   "mean_g": 0.634
+  },
+  "unit_square|8|0.06": {
+   "covers": 49,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.812,
+   "mean_g": 0.544
+  },
+  "unit_square|8|0.15": {
+   "covers": 41,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.25,
+   "mean_g": 0.543
+  },
+  "unit_square|16|0.02": {
+   "covers": 50,
+   "finite": 50,
+   "n": 50,
+   "width_med": 1.6,
+   "mean_g": 0.489
+  },
+  "unit_square|16|0.06": {
+   "covers": 46,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.312,
+   "mean_g": 0.55
+  },
+  "unit_square|16|0.15": {
+   "covers": 41,
+   "finite": 50,
+   "n": 50,
+   "width_med": 0.1,
+   "mean_g": 0.574
+  }
+ },
+ "verdict_cells": {
+  "unit_square|2|0.06": {
+   "calibrated_covers": 25,
+   "paper_covers": 50,
+   "calibrated_width": 3.062,
+   "paper_width": null,
+   "calibrated_mean_g": 0.768,
+   "paper_mean_g": 0.302
+  },
+  "unit_square|2|0.15": {
+   "calibrated_covers": 25,
+   "paper_covers": 50,
+   "calibrated_width": 1.125,
+   "paper_width": 2.525,
+   "calibrated_mean_g": 0.705,
+   "paper_mean_g": 0.468
+  },
+  "unit_square|4|0.15": {
+   "calibrated_covers": 24,
+   "paper_covers": 48,
+   "calibrated_width": 0.25,
+   "paper_width": 0.688,
+   "calibrated_mean_g": 0.639,
+   "paper_mean_g": 0.53
+  },
+  "unit_square|8|0.06": {
+   "calibrated_covers": 24,
+   "paper_covers": 49,
+   "calibrated_width": 0.35,
+   "paper_width": 0.812,
+   "calibrated_mean_g": 0.656,
+   "paper_mean_g": 0.544
+  },
+  "unit_square|16|0.15": {
+   "calibrated_covers": 14,
+   "paper_covers": 41,
+   "calibrated_width": 0.025,
+   "paper_width": 0.1,
+   "calibrated_mean_g": 0.602,
+   "paper_mean_g": 0.574
+  },
+  "real_zcta|2|0.06": {
+   "calibrated_covers": 25,
+   "paper_covers": 50,
+   "calibrated_width": 3.95,
+   "paper_width": null,
+   "calibrated_mean_g": 0.722,
+   "paper_mean_g": 0.524
+  },
+  "real_zcta|2|0.15": {
+   "calibrated_covers": 24,
+   "paper_covers": 50,
+   "calibrated_width": 1.05,
+   "paper_width": 2.362,
+   "calibrated_mean_g": 0.724,
+   "paper_mean_g": 0.578
+  },
+  "real_zcta|4|0.15": {
+   "calibrated_covers": 24,
+   "paper_covers": 48,
+   "calibrated_width": 0.225,
+   "paper_width": 0.65,
+   "calibrated_mean_g": 0.624,
+   "paper_mean_g": 0.558
+  },
+  "real_zcta|8|0.06": {
+   "calibrated_covers": 22,
+   "paper_covers": 49,
+   "calibrated_width": 0.325,
+   "paper_width": 0.838,
+   "calibrated_mean_g": 0.629,
+   "paper_mean_g": 0.529
+  },
+  "real_zcta|16|0.15": {
+   "calibrated_covers": 15,
+   "paper_covers": 40,
+   "calibrated_width": 0.025,
+   "paper_width": 0.1,
+   "calibrated_mean_g": 0.603,
+   "paper_mean_g": 0.568
+  }
+ },
+ "demo_fits": [
+  {
+   "outcome": "solar_installs",
+   "fitted_W": "k3",
+   "gamma_hat": 0.7366798699433886,
+   "se_cluster": 0.0276500929252411,
+   "z": 26.64294373025014,
+   "p": 2.1604784024887712e-156,
+   "dispersion_phi": 53.64417660650193,
+   "n_obs": 23640,
+   "n_zips": 1576,
+   "mean_degree": 3.0
+  },
+  {
+   "outcome": "solar_installs",
+   "fitted_W": "k6",
+   "gamma_hat": 0.8447196574434216,
+   "se_cluster": 0.0277418057644986,
+   "z": 30.44933933336139,
+   "p": 1.2222698243722009e-203,
+   "dispersion_phi": 46.37131897169989,
+   "n_obs": 23640,
+   "n_zips": 1576,
+   "mean_degree": 6.0
+  },
+  {
+   "outcome": "solar_installs",
+   "fitted_W": "k10",
+   "gamma_hat": 0.8836460454303092,
+   "se_cluster": 0.03021160781945,
+   "z": 29.24856070921931,
+   "p": 4.683559714813949e-188,
+   "dispersion_phi": 49.40450907838945,
+   "n_obs": 23640,
+   "n_zips": 1576,
+   "mean_degree": 10.0
+  },
+  {
+   "outcome": "solar_installs",
+   "fitted_W": "band100km",
+   "gamma_hat": 0.7313374670172484,
+   "se_cluster": 0.0590190192238991,
+   "z": 12.391555749897998,
+   "p": 2.9035524330675764e-35,
+   "dispersion_phi": 73.84836773164133,
+   "n_obs": 23640,
+   "n_zips": 1576,
+   "mean_degree": 237.40672588832487
+  }
+ ],
+ "demo_fits_fe": [
+  {
+   "outcome": "solar_installs_fe",
+   "fitted_W": "k3",
+   "gamma_hat": 0.3451074729749886,
+   "se_cluster": 0.0276399052670995,
+   "z": 12.485841381872552,
+   "p": 8.919540249753635e-36,
+   "n_obs": 23445,
+   "n_zips": 1563,
+   "mean_degree": 3.0
+  },
+  {
+   "outcome": "solar_installs_fe",
+   "fitted_W": "k6",
+   "gamma_hat": 0.4167769537557205,
+   "se_cluster": 0.0326999492879137,
+   "z": 12.74549235798862,
+   "p": 3.3029890867249223e-37,
+   "n_obs": 23445,
+   "n_zips": 1563,
+   "mean_degree": 6.0
+  },
+  {
+   "outcome": "solar_installs_fe",
+   "fitted_W": "k10",
+   "gamma_hat": 0.4587578131146995,
+   "se_cluster": 0.0351132799477427,
+   "z": 13.065080043716923,
+   "p": 5.2129767031429146e-39,
+   "n_obs": 23445,
+   "n_zips": 1563,
+   "mean_degree": 10.0
+  },
+  {
+   "outcome": "solar_installs_fe",
+   "fitted_W": "band100km",
+   "gamma_hat": 0.2590765482121136,
+   "se_cluster": 0.0671832228135146,
+   "z": 3.8562685349473527,
+   "p": 0.0001151310103763,
+   "n_obs": 23445,
+   "n_zips": 1563,
+   "mean_degree": 237.40672588832487
+  }
+ ],
+ "ev_fits": [
+  {
+   "outcome": "ev_net_additions_per_1000hh",
+   "fitted_W": "k3",
+   "gamma_hat": 9.272347547766472,
+   "se_cluster": 0.3100793164096413,
+   "z": 29.903147540214864,
+   "p": 1.7908520527624065e-196,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 3.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh",
+   "fitted_W": "k6",
+   "gamma_hat": 10.211363475295784,
+   "se_cluster": 0.3217968279305003,
+   "z": 31.73233105175657,
+   "p": 5.566522256237043e-221,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 6.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh",
+   "fitted_W": "k10",
+   "gamma_hat": 10.55080501957984,
+   "se_cluster": 0.3528026248488402,
+   "z": 29.905687419702105,
+   "p": 1.6597270362168088e-196,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 10.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh",
+   "fitted_W": "band100km",
+   "gamma_hat": 10.193594020033842,
+   "se_cluster": 0.4383027784643118,
+   "z": 23.256968746009992,
+   "p": 1.2093607582744201e-119,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 237.40672588832487
+  }
+ ],
+ "ev_fits_fe": [
+  {
+   "outcome": "ev_net_additions_per_1000hh_fe",
+   "fitted_W": "k3",
+   "gamma_hat": 0.360741152808032,
+   "se_cluster": 4.7396716879493175,
+   "z": 0.0761110002039216,
+   "p": 0.9393307886309455,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 3.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh_fe",
+   "fitted_W": "k6",
+   "gamma_hat": -0.5365191330183734,
+   "se_cluster": 5.001868095420218,
+   "z": -0.1072637508193424,
+   "p": 0.9145797412417648,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 6.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh_fe",
+   "fitted_W": "k10",
+   "gamma_hat": -4.25463639060672,
+   "se_cluster": 3.9842440708919615,
+   "z": -1.0678654005386332,
+   "p": 0.28558123172327,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 10.0
+  },
+  {
+   "outcome": "ev_net_additions_per_1000hh_fe",
+   "fitted_W": "band100km",
+   "gamma_hat": -8.437708518951695,
+   "se_cluster": 4.633007933683266,
+   "z": -1.8212160738183047,
+   "p": 0.0685740180412243,
+   "n_obs": 7880,
+   "n_zips": 1576,
+   "mean_degree": 237.40672588832487
+  }
+ ],
+ "paper_wsens": [
+  {
+   "fitted_W": "band100km",
+   "gamma_mean": 0.18609100485304547,
+   "covers": 0,
+   "width_med": 0.6
+  },
+  {
+   "fitted_W": "k10",
+   "gamma_mean": 0.6761443465842418,
+   "covers": 5,
+   "width_med": 1.125
+  },
+  {
+   "fitted_W": "k3",
+   "gamma_mean": 0.23181121545672845,
+   "covers": 1,
+   "width_med": 0.55
+  },
+  {
+   "fitted_W": "k6_true",
+   "gamma_mean": 0.500255789664503,
+   "covers": 5,
+   "width_med": 0.85
+  }
+ ]
+}
