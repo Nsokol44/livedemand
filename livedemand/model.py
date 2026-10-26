@@ -145,20 +145,62 @@ class Fit:
         return 1.0 / np.sqrt(info + pen)
 
     # ------------------------------------------------------ profile CI
-    def profile_ci(self, level=0.95, step=0.25, maxsteps=8):
-        """Profile-likelihood interval for gamma (the word-of-mouth parameter)."""
+    def profile_ci(self, level=0.95, step=0.025, maxsteps=80, legacy=False):
+        """Profile-likelihood interval for gamma (the word-of-mouth parameter).
+
+        Shipped procedure (stage-1 correction, 2026-10-25): the profile is
+        evaluated on a fixed fine lattice (multiples of 0.025 in gamma,
+        the grid of diagnostics_figrid.py) outward from the lattice point
+        nearest the estimate, warm-started along the search path, and
+        each bound is the last lattice point whose Delta-NLL does not
+        exceed the cut - the grid itself, with no interpolation of the
+        crossing. A bound is +-inf when the profile does not cross the
+        cut within the search range (+-2.0, the extent of the superseded
+        procedure).
+
+        legacy=True recovers the superseded procedure (0.25 steps with
+        linear interpolation of the crossing), kept for the record; it
+        understates interval width several-fold on the profile shapes
+        these fits produce (see diagnostics_figrid.py).
+        """
         from scipy.stats import chi2
         th = self.theta
         g0, nll0 = th["gamma"], th["nll"]
         cut = chi2.ppf(level, 1) / 2.0 * th.get("phi", 1.0)
+        if legacy:
+            return self._profile_ci_coarse(g0, nll0, cut)
+        k0 = int(round(g0 / step))
+        out = {}
+        for sign, name in ((-1, "lo"), (1, "hi")):
+            bound = sign * np.inf
+            warm = th
+            last = None
+            for k in range(0, maxsteps + 1):
+                g = (k0 + sign * k) * step
+                f = Fit(self.d, self.rho, self.sigma, self.s_tau, self.rb)
+                t = f.fit(theta0=warm, g_fixed=g)
+                warm = t
+                if t["nll"] - nll0 > cut:
+                    if last is not None:
+                        bound = last
+                    break
+                last = g
+            out[name] = bound
+        return out["lo"], out["hi"]
+
+    def _profile_ci_coarse(self, g0, nll0, cut):
+        """Superseded profile interval: 0.25 steps outward from the
+        estimate with linear interpolation of the crossing, search
+        extent +-2.0. Retained only so the pre-correction result files
+        remain reproducible."""
         out = {}
         for sign, name in ((-1, "lo"), (1, "hi")):
             bound = None
             prev_g, prev_d = g0, 0.0
-            for k in range(1, maxsteps + 1):
-                g = g0 + sign * step * k
+            for k in range(1, 9):
+                g = g0 + sign * 0.25 * k
                 f = Fit(self.d, self.rho, self.sigma, self.s_tau, self.rb)
-                t = f.fit(theta0=th, g_fixed=g)
+                t = f.fit(theta0=self.theta, g_fixed=g)
                 dnll = t["nll"] - nll0
                 if dnll >= cut:
                     # linear interpolation of the crossing

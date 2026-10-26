@@ -1,0 +1,316 @@
+[done] unit_2wk_0.02: 50 reps in 962 s
+[done] unit_2wk_0.06: 50 reps in 955 s
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_2wk_0.02', 'unit_2wk_0.06']
+[done] unit_2wk_0.15: 50 reps in 1042 s
+[done] unit_4wk_0.02: 50 reps in 1145 s
+[done] unit_4wk_0.06: 50 reps in 1004 s
+[done] unit_4wk_0.15: 50 reps in 285 s
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_2wk_0.02', 'unit_2wk_0.06', 'unit_2wk_0.15', 'unit_4wk_0.02', 'unit_4wk_0.06', 'unit_4wk_0.15']
+[done] unit_8wk_0.02: 50 reps in 1390 s
+[done] unit_8wk_0.06: 50 reps in 456 s
+[done] unit_8wk_0.15: 50 reps in 240 s
+[done] unit_16wk_0.02: 50 reps in 904 s
+[done] unit_16wk_0.06: 50 reps in 350 s
+[done] unit_16wk_0.15: 50 reps in 277 s
+[unit] gamma_hat vs r50: n=600, max diff = 2.22e-16; phi max diff = 1.42e-14
+unit stage done 3617 s
+[done] real_2wk_0.06: 50 reps in 1193 s
+[done] real_2wk_0.15: 50 reps in 733 s
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_16wk_0.02', 'unit_16wk_0.06', 'unit_16wk_0.15', 'unit_2wk_0.02', 'unit_2wk_0.06', 'unit_2wk_0.15', 'unit_4wk_0.02', 'unit_4wk_0.06', 'unit_4wk_0.15', 'unit_8wk_0.02', 'unit_8wk_0.06', 'unit_8wk_0.15']
+[unit] gamma_hat vs r50: n=600, max diff = 0.00e+00; phi max diff = 3.55e-15
+unit stage done 0 s
+[resume] e2_real_r50_fg.csv: cells done: ['real_2wk_0.06', 'real_2wk_0.15']
+[done] real_4wk_0.06: 50 reps in 911 s
+[done] real_4wk_0.15: 50 reps in 299 s
+[done] real_8wk_0.06: 50 reps in 403 s
+[done] real_8wk_0.15: 50 reps in 222 s
+[done] real_16wk_0.06: 50 reps in 382 s
+[done] real_16wk_0.15: 50 reps in 307 s
+[real] gamma_hat vs r50: n=400, max diff = 1.11e-16; phi max diff = 1.78e-15
+real stage done 2526 s
+[done] adap_eps0.0: 50 reps in 1140 s
+[done] adap_eps0.2: 50 reps in 845 s
+[adaptive] gamma_hat vs r50: n=100, max diff = 5.55e-17; phi max diff = 1.78e-15
+adaptive stage done 4511 s
+--- unit square, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.02  0.013966      50       0  50        NaN
+      0.06  0.302372      50       0  50        NaN
+      0.15  0.467577      50      47  50     2.5250
+4     0.02  0.471899      50       0  50        NaN
+      0.06  0.570300      50      47  50     2.6000
+      0.15  0.530062      48      50  50     0.6875
+8     0.02  0.633627      50       8  50     3.5000
+      0.06  0.544459      49      50  50     0.8125
+      0.15  0.542611      41      50  50     0.2500
+16    0.02  0.488910      50      50  50     1.6000
+      0.06  0.549889      46      50  50     0.3125
+      0.15  0.573728      41      50  50     0.1000
+--- real ZCTA, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.06  0.524019      50       0  50        NaN
+      0.15  0.577634      50      48  50     2.3625
+4     0.06  0.608502      50      45  50     2.7000
+      0.15  0.558465      48      50  50     0.6500
+8     0.06  0.528544      49      50  50     0.8375
+      0.15  0.565024      46      50  50     0.2375
+16    0.06  0.571090      46      50  50     0.3000
+      0.15  0.567640      40      50  50     0.1000
+--- unit square, adaptive 16wk 6% (fine grid) ---
+              mean_g  covers  finite    n  width_med
+weeks frac                                          
+16    0.06  0.564198      95     100  100      0.175
+--- sanity gate vs diagnostics_figrid_richest.csv ---
+Traceback (most recent call last):
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'lo_fg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 138, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 133, in main
+    sanity_figrid(unit, real)
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 77, in sanity_figrid
+    dlo = float(np.max(np.abs(m["lo_fg"] - m["lo_fine"])))
+                              ~^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'lo_fg'
+CHAIN EXIT: 1
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_16wk_0.02', 'unit_16wk_0.06', 'unit_16wk_0.15', 'unit_2wk_0.02', 'unit_2wk_0.06', 'unit_2wk_0.15', 'unit_4wk_0.02', 'unit_4wk_0.06', 'unit_4wk_0.15', 'unit_8wk_0.02', 'unit_8wk_0.06', 'unit_8wk_0.15']
+[unit] gamma_hat vs r50: n=600, max diff = 0.00e+00; phi max diff = 3.55e-15
+unit stage done 0 s
+[resume] e2_real_r50_fg.csv: cells done: ['real_16wk_0.06', 'real_16wk_0.15', 'real_2wk_0.06', 'real_2wk_0.15', 'real_4wk_0.06', 'real_4wk_0.15', 'real_8wk_0.06', 'real_8wk_0.15']
+[real] gamma_hat vs r50: n=400, max diff = 0.00e+00; phi max diff = 0.00e+00
+real stage done 0 s
+[resume] e2_adaptive_r50_fg.csv: cells done: ['adap_eps0.0', 'adap_eps0.2']
+[adaptive] gamma_hat vs r50: n=100, max diff = 0.00e+00; phi max diff = 0.00e+00
+adaptive stage done 0 s
+--- unit square, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.02  0.013966      50       0  50        NaN
+      0.06  0.302372      50       0  50        NaN
+      0.15  0.467577      50      47  50     2.5250
+4     0.02  0.471899      50       0  50        NaN
+      0.06  0.570300      50      47  50     2.6000
+      0.15  0.530062      48      50  50     0.6875
+8     0.02  0.633627      50       8  50     3.5000
+      0.06  0.544459      49      50  50     0.8125
+      0.15  0.542611      41      50  50     0.2500
+16    0.02  0.488910      50      50  50     1.6000
+      0.06  0.549889      46      50  50     0.3125
+      0.15  0.573728      41      50  50     0.1000
+--- real ZCTA, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.06  0.524019      50       0  50        NaN
+      0.15  0.577634      50      48  50     2.3625
+4     0.06  0.608502      50      45  50     2.7000
+      0.15  0.558465      48      50  50     0.6500
+8     0.06  0.528544      49      50  50     0.8375
+      0.15  0.565024      46      50  50     0.2375
+16    0.06  0.571090      46      50  50     0.3000
+      0.15  0.567640      40      50  50     0.1000
+--- unit square, adaptive 16wk 6% (fine grid) ---
+              mean_g  covers  finite    n  width_med
+weeks frac                                          
+16    0.06  0.564198      95     100  100      0.175
+--- sanity gate vs diagnostics_figrid_richest.csv ---
+Traceback (most recent call last):
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'lo_fg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 138, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 133, in main
+    sanity_figrid(unit, real)
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 79, in sanity_figrid
+    same = int((np.isclose(m["lo_fg"], m["lo_fine"])
+                           ~^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'lo_fg'
+CHAIN EXIT: 1
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_16wk_0.02', 'unit_16wk_0.06', 'unit_16wk_0.15', 'unit_2wk_0.02', 'unit_2wk_0.06', 'unit_2wk_0.15', 'unit_4wk_0.02', 'unit_4wk_0.06', 'unit_4wk_0.15', 'unit_8wk_0.02', 'unit_8wk_0.06', 'unit_8wk_0.15']
+[unit] gamma_hat vs r50: n=600, max diff = 0.00e+00; phi max diff = 3.55e-15
+unit stage done 0 s
+[resume] e2_real_r50_fg.csv: cells done: ['real_16wk_0.06', 'real_16wk_0.15', 'real_2wk_0.06', 'real_2wk_0.15', 'real_4wk_0.06', 'real_4wk_0.15', 'real_8wk_0.06', 'real_8wk_0.15']
+[real] gamma_hat vs r50: n=400, max diff = 0.00e+00; phi max diff = 4.44e-16
+real stage done 0 s
+[resume] e2_adaptive_r50_fg.csv: cells done: ['adap_eps0.0', 'adap_eps0.2']
+[adaptive] gamma_hat vs r50: n=100, max diff = 0.00e+00; phi max diff = 0.00e+00
+adaptive stage done 0 s
+--- unit square, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.02  0.013966      50       0  50        NaN
+      0.06  0.302372      50       0  50        NaN
+      0.15  0.467577      50      47  50     2.5250
+4     0.02  0.471899      50       0  50        NaN
+      0.06  0.570300      50      47  50     2.6000
+      0.15  0.530062      48      50  50     0.6875
+8     0.02  0.633627      50       8  50     3.5000
+      0.06  0.544459      49      50  50     0.8125
+      0.15  0.542611      41      50  50     0.2500
+16    0.02  0.488910      50      50  50     1.6000
+      0.06  0.549889      46      50  50     0.3125
+      0.15  0.573728      41      50  50     0.1000
+--- real ZCTA, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.06  0.524019      50       0  50        NaN
+      0.15  0.577634      50      48  50     2.3625
+4     0.06  0.608502      50      45  50     2.7000
+      0.15  0.558465      48      50  50     0.6500
+8     0.06  0.528544      49      50  50     0.8375
+      0.15  0.565024      46      50  50     0.2375
+16    0.06  0.571090      46      50  50     0.3000
+      0.15  0.567640      40      50  50     0.1000
+--- unit square, adaptive 16wk 6% (fine grid) ---
+              mean_g  covers  finite    n  width_med
+weeks frac                                          
+16    0.06  0.564198      95     100  100      0.175
+--- sanity gate vs diagnostics_figrid_richest.csv ---
+Traceback (most recent call last):
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'covers_fg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 138, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 133, in main
+    sanity_figrid(unit, real)
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/run_e2_finegrid.py", line 81, in sanity_figrid
+    print(f"{label}: coverage fg = {int(m['covers_fg'].sum())}/50 vs "
+                                        ~^^^^^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'covers_fg'
+CHAIN EXIT: 1
+[resume] e2_unit_r50_fg.csv: cells done: ['unit_16wk_0.02', 'unit_16wk_0.06', 'unit_16wk_0.15', 'unit_2wk_0.02', 'unit_2wk_0.06', 'unit_2wk_0.15', 'unit_4wk_0.02', 'unit_4wk_0.06', 'unit_4wk_0.15', 'unit_8wk_0.02', 'unit_8wk_0.06', 'unit_8wk_0.15']
+[unit] gamma_hat vs r50: n=600, max diff = 0.00e+00; phi max diff = 3.55e-15
+unit stage done 0 s
+[resume] e2_real_r50_fg.csv: cells done: ['real_16wk_0.06', 'real_16wk_0.15', 'real_2wk_0.06', 'real_2wk_0.15', 'real_4wk_0.06', 'real_4wk_0.15', 'real_8wk_0.06', 'real_8wk_0.15']
+[real] gamma_hat vs r50: n=400, max diff = 0.00e+00; phi max diff = 4.44e-16
+real stage done 0 s
+[resume] e2_adaptive_r50_fg.csv: cells done: ['adap_eps0.0', 'adap_eps0.2']
+[adaptive] gamma_hat vs r50: n=100, max diff = 0.00e+00; phi max diff = 0.00e+00
+adaptive stage done 0 s
+--- unit square, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.02  0.013966      50       0  50        NaN
+      0.06  0.302372      50       0  50        NaN
+      0.15  0.467577      50      47  50     2.5250
+4     0.02  0.471899      50       0  50        NaN
+      0.06  0.570300      50      47  50     2.6000
+      0.15  0.530062      48      50  50     0.6875
+8     0.02  0.633627      50       8  50     3.5000
+      0.06  0.544459      49      50  50     0.8125
+      0.15  0.542611      41      50  50     0.2500
+16    0.02  0.488910      50      50  50     1.6000
+      0.06  0.549889      46      50  50     0.3125
+      0.15  0.573728      41      50  50     0.1000
+--- real ZCTA, random (fine grid) ---
+              mean_g  covers  finite   n  width_med
+weeks frac                                         
+2     0.06  0.524019      50       0  50        NaN
+      0.15  0.577634      50      48  50     2.3625
+4     0.06  0.608502      50      45  50     2.7000
+      0.15  0.558465      48      50  50     0.6500
+8     0.06  0.528544      49      50  50     0.8375
+      0.15  0.565024      46      50  50     0.2375
+16    0.06  0.571090      46      50  50     0.3000
+      0.15  0.567640      40      50  50     0.1000
+--- unit square, adaptive 16wk 6% (fine grid) ---
+              mean_g  covers  finite    n  width_med
+weeks frac                                          
+16    0.06  0.564198      95     100  100      0.175
+--- sanity gate vs diagnostics_figrid_richest.csv ---
+unit: coverage fg = 41/50 vs diagnostic fine = 41/50; intervals identical in 50/50 reps; max |bound diff| lo 0.0000, hi 0.0000
+real: coverage fg = 40/50 vs diagnostic fine = 40/50; intervals identical in 50/50 reps; max |bound diff| lo 0.0000, hi 0.0000
+ALL DONE in 0 s
+gamma_hat vs shipped wsens: n=20, max diff = 1.11e-16
+           gamma_mean  covers  width_med
+fitted_W                                
+band100km    0.186091       0      0.600
+k10          0.676144       5      1.125
+k3           0.231811       1      0.550
+k6_true      0.500256       5      0.850
+wsens fine-grid DONE in 192 s
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/diagnostics_boot_fg.py", line 91, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/diagnostics_boot_fg.py", line 67, in main
+    assert len(r) == len(s) == args.reps
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/diagnostics_boot_fg.py", line 94, in <module>
+    main()
+  File "/home/hatch/workspace/livedemand-ijgis/manuscript/code/diagnostics_boot_fg.py", line 72, in main
+    assert d < 1e-9, (geom, variant, gen, d)
+           ^^^^^^^^
+AssertionError: ('unit', 'cond', 'fitted', 0.0645538181004448)
+[done] unit_square/cond/fitted: 40 jobs in 176 s; coverage 36/40 (shipped 15/40); gamma_hat max diff 0.00e+00
+[done] unit_square/cond/truth: 40 jobs in 213 s; coverage 33/40 (shipped 7/40); gamma_hat max diff 0.00e+00
+[done] unit_square/full/fitted: 40 jobs in 261 s; coverage 28/40 (shipped 7/40); gamma_hat max diff 5.55e-17
+[done] unit_square/full/truth: 40 jobs in 245 s; coverage 22/40 (shipped 3/40); gamma_hat max diff 0.00e+00
+[done] real_zcta/cond/fitted: 40 jobs in 332 s; coverage 30/40 (shipped 7/40); gamma_hat max diff 0.00e+00
+[done] real_zcta/cond/truth: 40 jobs in 323 s; coverage 25/40 (shipped 7/40); gamma_hat max diff 0.00e+00
+[done] real_zcta/full/fitted: 40 jobs in 376 s; coverage 33/40 (shipped 14/40); gamma_hat max diff 0.00e+00
+[done] real_zcta/full/truth: 40 jobs in 311 s; coverage 32/40 (shipped 9/40); gamma_hat max diff 0.00e+00
+--- bootstrap: corrected (fine grid) coverage ---
+                            sum  count
+geometry    variant gen               
+real_zcta   cond    fitted   30     40
+                    truth    25     40
+            full    fitted   33     40
+                    truth    32     40
+unit_square cond    fitted   36     40
+                    truth    33     40
+            full    fitted   28     40
+                    truth    22     40
+full-feedback bias by geometry (fg):
+geometry
+real_zcta     -0.007747
+unit_square   -0.034315
+dtype: float64
+bootstrap fine-grid DONE: 320 rows -> /home/hatch/workspace/livedemand-ijgis/manuscript/code/results/diagnostics_bootstrap_fg.csv

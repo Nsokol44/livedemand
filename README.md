@@ -1,4 +1,4 @@
-# livedemand-ijgis
+# livedemand
 
 Simulation code and result files for the manuscript **"Identifying spatial
 spillover in geo-experiments"** (Nicholas J. Sokol). The study is a simulation
@@ -87,6 +87,49 @@ reported in the manuscript.
   the `make_figures.py` style (smaller markers for 50 replications).
 - `voice_metrics.py` — the before/after voice measurements for the
   revision's voice pass (documented counting rules in its docstring).
+
+## Stage-1 correction (2026-10-25): the interval procedure
+
+The profile-likelihood interval procedure shipped in `livedemand/model.py`
+searched outward from the estimate in steps of 0.25 in gamma and linearly
+interpolated where the profile crossed its cut, which understates interval
+width several-fold at rich designs. `Fit.profile_ci` now computes intervals
+on a fine grid (0.025 steps, same cut, same dispersion factor) and takes the
+grid points themselves as the bounds, with no interpolation. The superseded
+construction remains available as `profile_ci(..., legacy=True)`, for the
+record. All other model code and every seed are unchanged.
+
+The E2 grid, the W-sensitivity refits and the parametric bootstrap were
+rerun with the corrected procedure, on identical worlds and seeds (the
+runners assert the point estimates against the earlier result files, value
+for value; only intervals change):
+
+- `run_e2_finegrid.py` — the full E2 grid (unit square 12 cells, real
+  ZCTA 8 cells, adaptive 2 cells; 50 replications per cell). Outputs
+  `results/e2_unit_r50_fg.csv`, `results/e2_real_r50_fg.csv`,
+  `results/e2_adaptive_r50_fg.csv`; run log `results/stage1_fg.log`.
+  One command: `python run_e2_finegrid.py --procs 2 --skip-done`.
+  Sanity gate: at the richest cell the rerun reproduces the independent
+  fine-grid diagnostic (`diagnostics_figrid_richest.csv`) exactly —
+  coverage 41/50 (unit square) and 40/50 (real ZCTA), intervals identical
+  in 50/50 replications on both geometries.
+- `run_wsens_finegrid.py` — the W-sensitivity refits. Output
+  `results/realgeo_wsens_fg.csv`.
+- `diagnostics_boot_fg.py` — the D3 parametric bootstrap (same per-job
+  seeds and geometry labels as the shipped `diagnostics.py` run, so the
+  bootstrap worlds coincide job for job). Output
+  `results/diagnostics_bootstrap_fg.csv`. Corrected coverage: 22–36 of
+  40 per cell (unit square) and 25–33 of 40 (real ZCTA), against 3–15
+  of 40 for the superseded procedure.
+- `make_fig2_fg.py`, `make_fig3_fg.py` — rebuild Figures 2 and 3 from
+  the corrected result files.
+
+Headline consequence (richest cell, 16 weeks at 15%/week): coverage of
+the true gamma is 41/50 on the unit square and 40/50 on real ZCTA
+geometry, against 12/50 and 8/50 under the superseded procedure. The
+residual shortfall against the nominal 95% is attributed in the
+manuscript to the estimator's small downward bias through the
+accumulated peer state.
 
 ## Original experiments
 
